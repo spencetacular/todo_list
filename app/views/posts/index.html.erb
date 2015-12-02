@@ -1,0 +1,13 @@
+<h1>To Do List</h1>
+<p><%= link_to 'New To Do', new_post_path %></p>
+<%  @posts.each do |post| %>
+	<ul>
+		<li> 
+			<%= post.title %>
+			<%= link_to 'Edit', edit_post_path(post) %>
+			<%= link_to 'Delete', post_path(post), method: :delete %>
+		</li> 
+	</ul>
+	<!-- <h2><%= post.title  %></h2> -->
+  <!-- <%= link_to 'Show To Do Item', post_path(post) %> -->
+<% end %>
